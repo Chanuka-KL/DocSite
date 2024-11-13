@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanuka-KL / Event History</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Monospace;
+        }
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('none') no-repeat center center/cover;
+            background-color: none;
+            
+        }
+        .container {
+            background: rgba(255, 255, 255,); /* Light transparent layer */
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            color: #ffffff;
+           
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            
+        }
+        .event {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.4); /* Light transparent layer */
+            transition: transform 0.2s;
+            box-shadow: 0px 1px 20px rgba(0, 0, 0,);
+            border: 0px solid rgba(0, 0, 0,);
+            
+        }
+        .event:hover {
+            transform: scale(1.02);
+        }
+        .event a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .event a:hover {
+            text-decoration: underline;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .status.coming {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+        .status.over {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #6c757d;
+            text-align: center;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        a.back-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #e91e63;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            text-align: center;
+            box-shadow: 0px 1px 20px rgba(233, 30, 99);
+        }
+        a.back-button:hover {
+            background-color: #5a1fb5;
+        }
+        .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video is behind other elements */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire screen */
+}
+
+.status.ongoing {
+  background-color: #ff9105;
+            color: #ffffff;
+}
+
+    </style>
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+        <source src="background2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    <div class="container">
+        <h3>Status</h3>
+        <div class="event">
+          <a href="Unotherize.html" target="_blank">GH Hacking</a>
+        
+         <span class="status coming">Coming</span>
+         
+        </div>
+        <div class="event">
+            <a href="Test.html" target="_blank">Software P.E</a>
+            <span class="status ongoing">Ongoing</span>
+        </div>
+        <div class="event">
+            <a href="Unotherize.html" target="_blank">Trojans pt-2</a>
+            <br>
+            <span class="status over">Over</span>
+        </div>
+        <div class="event">
+            <a href="Unotherize.html" target="_blank">Trojans pt-1</a>
+            <br>
+            <span class="status over">Over</span>
+        </div>
+        <div class="event">
+            <a href="Unotherize.html" target="_blank">CEH guide pt-1</a>
+            <br>
+            <span class="status over">Over</span>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Chanuka-KL | <a href="https://github.com/Chanuka-KL" target="_blank">GitHub Profile</a></p>
+        <a class="back-button" href="index.html">See Main page</a>
+    </div>
+</body>
+</html>
